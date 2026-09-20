@@ -421,7 +421,7 @@
         <input type="checkbox" id="t7">
         <div>
           <span class="badge-new">אביזר חדש</span>
-          <strong>כפיפת ברכיים בשכיבה עם משקולת ברגל (Lying Leg Curls):</strong> 3 × 12–15 <span class="muscle-name">(בידוד המסטרינגס)</span>
+          <strong>כפיפת ברכיים בשכיבה עם משקולת ברגל (Lying Leg Curls):</strong> 3 × 12–15 <span class="muscle-name">(בידוד המסטרינגס / כופפי ברך)</span>
           <span class="weight-instruction">📌 עיגון דאמבל 6–10 ק"ג עם הרצועה לכף הרגל, שכיבה על הבטן וכפיפה מבוקרת עד כיווץ מלא.</span>
           <button class="demo-btn" onclick="showDemo('כפיפת ברכיים עם משקולת ברגל', 'ZPwZHCXY8mU', 'שכב על הבטן, חבר את הדאמבל לכף הרגל בעזרת הרצועה. כופף את הברך עד כיווץ מלא בהמסטרינגס ורד באיטיות של 3 שניות.')">🎬 צפה בהדגמת תרגיל</button>
         </div>
@@ -544,7 +544,7 @@
     <!-- יום חמישי: תחתון B -->
     <div class="card">
       <span class="badge">יום חמישי</span>
-      <h2>תחתון B (דגש שרשרת אחורית ויציבה חד-רגלית)</h2>
+      <h2>תחתון B (דגש שרשרת אחורית + פשיטת ברכיים מבודדת)</h2>
 
       <label class="todo-item">
         <input type="checkbox" id="t19">
@@ -567,13 +567,23 @@
       <label class="todo-item">
         <input type="checkbox" id="t21">
         <div>
+          <span class="badge-new">אביזר חדש</span>
+          <strong>פשיטת ברכיים בישיבה עם משקולת ברגל (Seated Leg Extension):</strong> 3 × 12–15 לכל רגל <span class="muscle-name">(בידוד מושלם לארבע-ראשי)</span>
+          <span class="weight-instruction">📌 ישיבה על ספה מוגבהת/כיסא, דאמבל 4–8 ק"ג מחובר לרצועה. יישור מלא של הברך, עצירה של שנייה בשיא וירידה איטית של 3 שניות.</span>
+          <button class="demo-btn" onclick="showDemo('פשיטת ברכיים בישיבה עם משקולת', '26XGFBBZu8M', 'שב על ספה כשכפות הרגליים באוויר. חבר את המשקולת לרצועת הרגל. יישר את הברך קדימה עד כיווץ שיא בארבע-ראשי, עצור לשנייה ורד באיטיות מבוקרת.')">🎬 צפה בהדגמת תרגיל</button>
+        </div>
+      </label>
+
+      <label class="todo-item">
+        <input type="checkbox" id="t22">
+        <div>
           <strong>עליות תאומים בעמידה על מדרגה:</strong> 4 × 15–20 <span class="muscle-name">(שוקיים ותאומים)</span>
           <span class="weight-instruction">📌 דאמבל 17.5 ק"ג ביד, כיווץ שיא של שנייה בראש התנועה.</span>
         </div>
       </label>
 
       <label class="todo-item">
-        <input type="checkbox" id="t22">
+        <input type="checkbox" id="t23">
         <div>
           <strong>פלאנק סטטי מבוקר (Hollow Plank):</strong> 3 × 60 שנ' <span class="muscle-name">(שריר הבטן הרוחבי TVA)</span>
           <span class="weight-instruction">📌 שאיבת פופיק חזקה, אגן מכווץ לאחור.</span>
@@ -722,7 +732,7 @@
 
     function resetTasks() {
       if (confirm('לאפס את כל סימוני האימונים השבועיים?')) {
-        for (let i = 1; i <= 22; i++) {
+        for (let i = 1; i <= 23; i++) {
           const el = document.getElementById('t' + i);
           if (el) el.checked = false;
         }
@@ -732,7 +742,7 @@
 
     function saveState() {
       const state = {};
-      for (let i = 1; i <= 22; i++) {
+      for (let i = 1; i <= 23; i++) {
         const el = document.getElementById('t' + i);
         if (el) state['t' + i] = el.checked;
       }
@@ -747,7 +757,7 @@
       const saved = localStorage.getItem('sk_fitness_phase2_state');
       if (!saved) return;
       const state = JSON.parse(saved);
-      for (let i = 1; i <= 22; i++) {
+      for (let i = 1; i <= 23; i++) {
         const el = document.getElementById('t' + i);
         if (el && state['t' + i] !== undefined) el.checked = state['t' + i];
       }
