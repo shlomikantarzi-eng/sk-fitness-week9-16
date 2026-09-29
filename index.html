@@ -335,7 +335,6 @@
 </head>
 <body>
 
-  <!-- כותרת ממותגת -->
   <div class="brand-header">
     <div class="brand-title">
       <span class="brand-tag">S.K</span>
@@ -344,17 +343,15 @@
     <button class="reset-btn" onclick="resetTasks()">אפס שבוע</button>
   </div>
 
-  <!-- טאבים ראשיים -->
   <div class="top-tabs">
     <button id="topBtnWorkout" class="top-tab-btn active" onclick="showTab('workout')">🏋️ תוכנית אימונים (Phase 2)</button>
     <button id="topBtnNutrition" class="top-tab-btn" onclick="showTab('nutrition')">🥗 תפריט ותזונה</button>
     <button id="topBtnDeload" class="top-tab-btn" onclick="showTab('deload')">🔄 פרוטוקול דילואד</button>
   </div>
 
-  <!-- ==================== תצוגת אימונים ==================== -->
+  <!-- תצוגת אימונים -->
   <div id="view-workout" class="tab-view active">
 
-    <!-- מעקב שבועות 9-16 -->
     <div class="weeks-tracker">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <strong style="font-size:0.9rem;">🎯 מעקב שלב 2 (העמסה מתקדמת):</strong>
@@ -372,7 +369,6 @@
       </div>
     </div>
 
-    <!-- טיימר מנוחה -->
     <div class="timer-bar">
       <span>⏱️ מנוחה בין סטים: <strong id="timerDisplay">מוכן</strong></span>
       <div>
@@ -381,10 +377,10 @@
       </div>
     </div>
 
-    <!-- יום ראשון: עליון A -->
+    <!-- 1. יום ראשון: אימון כוח -->
     <div class="card">
-      <span class="badge">יום ראשון</span>
-      <h2>עליון A + הליכת ערב קלה</h2>
+      <span class="badge">יום ראשון | בוקר/צהריים</span>
+      <h2>עליון A (דגש חזה עליון + רוחב גב)</h2>
 
       <label class="todo-item">
         <input type="checkbox" id="t1">
@@ -432,18 +428,23 @@
           <button class="demo-btn" onclick="showDemo('כפיפות מרפקים בשיפוע', 'soxrZlIl35U', 'מרפקים נשארים מאחורי קו הגוף לכל אורך התנועה למתיחה מקסימלית.')">🎬 צפה בהדגמת תרגיל</button>
         </div>
       </label>
+    </div>
 
+    <!-- 2. יום ראשון: רובריקת הליכון ערב -->
+    <div class="card">
+      <span class="badge-cardio">יום ראשון | ערב</span>
+      <h2>הליכת התאוששות קלה בהליכון</h2>
       <label class="todo-item">
         <input type="checkbox" id="t6">
         <div>
           <span class="badge-new">הליכון ערב</span>
-          <strong>הליכת התאוששות קלה בהליכון (ערב):</strong> 30–40 דק' <span class="muscle-name">(שריפת שומן וזרימת דם)</span>
+          <strong>הליכת התאוששות ביתית:</strong> 30–40 דק' <span class="muscle-name">(שריפת שומן וזרימת דם)</span>
           <span class="weight-instruction">📌 קצב מתון 4.8–5.2 קמ"ש ללא ווסט משקל. מומלץ לאחר ארוחת הערב.</span>
         </div>
       </label>
     </div>
 
-    <!-- יום שני: תחתון A -->
+    <!-- 3. יום שני: אימון כוח -->
     <div class="card">
       <span class="badge">יום שני</span>
       <h2>תחתון A + שילוב רצועות קרסול ו-AB Slings (ירך אחורית ובטן)</h2>
@@ -496,10 +497,10 @@
       </label>
     </div>
 
-    <!-- יום שלישי: התאוששות אקטיבית -->
+    <!-- 4. יום שלישי: רובריקת הליכון מרכזית LISS -->
     <div class="card">
-      <span class="badge">יום שלישי</span>
-      <h2>התאוששות אקטיבית, LISS ביתי ולוח שיווי משקל (אימון מרכזי)</h2>
+      <span class="badge-cardio">יום שלישי | אימון אירובי מרכזי</span>
+      <h2>התאוששות אקטיבית, LISS ביתי ולוח שיווי משקל</h2>
 
       <label class="todo-item">
         <input type="checkbox" id="t12">
@@ -528,10 +529,10 @@
       </label>
     </div>
 
-    <!-- יום רביעי: עליון B -->
+    <!-- 5. יום רביעי: אימון כוח -->
     <div class="card">
-      <span class="badge">יום רביעי</span>
-      <h2>עליון B + פינישר ליבה והליכת ערב קלה</h2>
+      <span class="badge">יום רביעי | בוקר/צהריים</span>
+      <h2>עליון B (דגש עובי גב + יד אחורית + פינישר ליבה)</h2>
 
       <label class="todo-item">
         <input type="checkbox" id="t15">
@@ -590,18 +591,23 @@
           <button class="demo-btn" onclick="showDemo('כפיפות בטן על פיתת יציבה', 'e4pE9vJkY38', 'מקם את הפיתה תחת השקע של הגב התחתון. ירידה מבוקרת לאחור עד שהבטן נמתחת מעבר לקו הניטרלי, ועלייה איטית עם כיווץ חד בסוף התנועה.')">🎬 צפה בהדגמת תרגיל</button>
         </div>
       </label>
+    </div>
 
+    <!-- 6. יום רביעי: רובריקת הליכון ערב -->
+    <div class="card">
+      <span class="badge-cardio">יום רביעי | ערב</span>
+      <h2>הליכת התאוששות קלה בהליכון</h2>
       <label class="todo-item">
         <input type="checkbox" id="t21">
         <div>
           <span class="badge-new">הליכון ערב</span>
-          <strong>הליכת התאוששות קלה בהליכון (ערב):</strong> 30–40 דק' <span class="muscle-name">(הוצאה אנרגטית ללא עומס)</span>
+          <strong>הליכת שחרור והוצאה קלורית:</strong> 30–40 דק' <span class="muscle-name">(הוצאה אנרגטית ללא עומס)</span>
           <span class="weight-instruction">📌 קצב מתון 4.8–5.2 קמ"ש ללא ווסט משקל. תנועה רציפה להזרמת דם.</span>
         </div>
       </label>
     </div>
 
-    <!-- יום חמישי: תחתון B -->
+    <!-- 7. יום חמישי: אימון כוח -->
     <div class="card">
       <span class="badge">יום חמישי</span>
       <h2>תחתון B (דגש שרשרת אחורית + פשיטת ברכיים מבודדת)</h2>
@@ -653,16 +659,15 @@
       </label>
     </div>
 
-    <!-- כרטיסיית שישי / שבת (הליכון סופ"ש) -->
+    <!-- 8. סוף שבוע: רובריקת הליכון סופ"ש -->
     <div class="card">
       <span class="badge-cardio">סוף שבוע (שישי או שבת)</span>
       <h2>הליכת סופ"ש בהליכון ביתי</h2>
-
       <label class="todo-item">
         <input type="checkbox" id="t27">
         <div>
           <span class="badge-new">הליכון סופ"ש</span>
-          <strong>הליכת בוסטר שריפת שומן (30–45 דק'):</strong> קצב 4.8–5.4 קמ"ש <span class="muscle-name">(שמירה על גירעון קלורי פעיל)</span>
+          <strong>הליכת בוסטר שריפת שומן:</strong> 30–45 דק' <span class="muscle-name">(שמירה על גירעון קלורי פעיל)</span>
           <span class="weight-instruction">📌 מבוצע ביום שישי בבוקר/צהריים או בשבת. ללא ווסט משקל, הליכה נעימה בקצב שיחה לשמירה על תנועתיות בסופ"ש.</span>
         </div>
       </label>
@@ -670,9 +675,8 @@
 
   </div>
 
-  <!-- ==================== תצוגת תזונה ==================== -->
+  <!-- תצוגת תזונה -->
   <div id="view-nutrition" class="tab-view">
-
     <div class="macro-bar">
       <div class="macro-item"><strong>1,550</strong> קלוריות</div>
       <div class="macro-item"><strong>150–160 גר'</strong> חלבון</div>
@@ -692,20 +696,16 @@
         • <strong>ארוחת ערב קלילה (~40-45 גר' חלבון):</strong> פיצת טונה-אנשובי / קופסת טונה, 2 ביצים, גבינה לבנה/ריקוטה 5% ושפע ירקות עליים.
       </div>
     </div>
-
   </div>
 
-  <!-- ==================== תצוגת דילואד (Deload) ==================== -->
+  <!-- תצוגת דילואד -->
   <div id="view-deload" class="tab-view">
-
     <div class="card">
       <span class="badge">שבוע 8.5 | התאוששות חובה</span>
       <h2>פרוטוקול שבוע דילואד (Deload Week)</h2>
-      
       <p style="font-size:0.92rem; color:var(--muted); line-height:1.6;">
         בין שבוע 8 לשבוע 9 מבצעים <strong>שבוע דילואד</strong>. מטרתו אינה איפוס, אלא מתן אפשרות למערכת העצבים, לגידים ולמפרקים להחלים מעומס של חודשיים.
       </p>
-
       <div style="background:var(--card-inner); padding:12px; border-radius:10px; border:1px solid var(--border-color); font-size:0.88rem; line-height:1.6; margin-bottom:12px;">
         <strong>📋 איך מתאמנים בשבוע הדילואד?</strong><br>
         1. <strong>הורדת נפח ב-50%:</strong> מבצעים בדיוק את אותם התרגילים, אך <strong>2 סטים בלבד</strong> לכל תרגיל במקום 3–4.<br>
@@ -714,10 +714,9 @@
         4. <strong>תזונה:</strong> נשארים על 1,550 קק"ל ו-150 גרם חלבון כדי לאפשר בנייה ושיקום אופטימליים.
       </div>
     </div>
-
   </div>
 
-  <!-- נגן מובנה להדגמות וידאו + כפתור פתיחה ישיר -->
+  <!-- מודל וידאו -->
   <div id="demoModal" class="demo-modal" onclick="closeDemoOnBg(event)">
     <div class="demo-content">
       <div class="demo-header">
@@ -728,11 +727,7 @@
         <div class="video-wrapper">
           <iframe id="videoIframe" src="" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
-        
-        <a id="ytDirectBtn" href="#" target="_blank" class="yt-direct-btn">
-          ▶ פתח ישירות באפליקציית YouTube ↗
-        </a>
-
+        <a id="ytDirectBtn" href="#" target="_blank" class="yt-direct-btn">▶ פתח ישירות באפליקציית YouTube ↗</a>
         <div class="tips-box">
           <strong>💡 דגשי ביצוע וטמפו:</strong>
           <span id="demoTips">דגשים לביצוע נכון.</span>
@@ -766,10 +761,8 @@
     function showDemo(title, youtubeId, tips) {
       document.getElementById('demoTitle').innerText = title;
       document.getElementById('demoTips').innerText = tips;
-      
       document.getElementById('videoIframe').src = "https://www.youtube.com/embed/" + youtubeId + "?rel=0";
       document.getElementById('ytDirectBtn').href = "https://www.youtube.com/watch?v=" + youtubeId;
-      
       document.getElementById('demoModal').classList.add('active');
     }
 
